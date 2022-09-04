@@ -10,6 +10,8 @@ pub mod payments {
 #[derive(Debug, Default)]
 pub struct PaymentService {}
 
+
+// This is the payment service server for grpc 
 #[tonic::async_trait]
 impl Payment for PaymentService {
     async fn send_payment(&self, req: Request<PaymentRequest>) -> Result<Response<PaymentResponse>, Status> {
